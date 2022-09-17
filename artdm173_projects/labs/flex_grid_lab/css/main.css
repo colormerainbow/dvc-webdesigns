@@ -1,0 +1,137 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@400;700;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin:0;
+        background:#000000;
+        color:#ffffff;
+    }
+
+/* Use Flexbox to format the header */
+    header {
+        background:#333;
+    }
+    .head-banner {
+        display:flex;
+        align-items:center;
+    }
+    header h1 {
+        color:#b6cb7c;
+        margin: auto;
+        font-family: 'Merriweather', serif;
+        font-size: clamp(1.8rem, 10vw, 2.8rem);
+    }
+    .logo {
+        display:block;
+        margin-right:2rem;
+      }
+    nav {
+        background:#222;
+    }
+    .site-nav a {
+        color: white;
+        font-family: 'Lato', sans-serif;
+        display:block;
+        margin: 1rem;
+        text-decoration:none;
+    }
+    
+    .site-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        padding:0;
+        margin:0;
+    }
+    #home .home-pg {
+        text-decoration: none;
+        color: #a7c957;
+        border-top: 2px solid;
+    }
+
+/* Use CSS Grid to format the main section */
+
+/* Main Layout */
+
+ main h2 {
+    margin:0;
+    font-family: 'Merriweather', serif;
+    font-size: 1.9rem;
+    color: #fdfee6;
+    padding-bottom: .5rem;
+  }
+  
+ main img {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+ }
+ main p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.3rem;
+ }
+
+/* Explicit layout of grid  */
+ main {
+    display:grid;
+    grid-gap:.5rem;
+    grid-template-areas: 
+    "a b c d" 
+    "e f f g" 
+    "h i j k"; 
+ }
+  
+  .a {
+    grid-area: a;
+  }
+  .b {
+    grid-area: b;
+  }
+  .c {
+    grid-area: c;
+  }
+  .d {
+    grid-area: d;
+  }
+  .e {
+    grid-area: e;
+  }
+  .f {
+    grid-area: f;
+    padding: 2rem;
+  }
+  .g {
+    grid-area: g;
+  }
+  .h {
+    grid-area: h;
+  }
+  .i {
+    grid-area: i;
+  }
+  .j {
+    grid-area: j;
+  }
+  .k {
+    grid-area: k;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .f {
+      transform: rotate(-5deg);
+    }
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 3rem;
+    font-family: 'Lato', sans-serif;
+  }

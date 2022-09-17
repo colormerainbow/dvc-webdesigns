@@ -1,0 +1,88 @@
+/* Fonts
+    font-family: 'Patua One', cursive; */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Patua+One);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Patua One', cursive;
+    padding: 3rem;
+    background-color: black;
+    opacity: 0.8;
+    color: #cad2c5;
+}
+
+main {
+    font-family: 'Lato', sans-serif;
+    background-color: #cad2c5;
+    padding-bottom: 3rem;
+}
+.intro p{
+    padding-left: 2rem;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    padding: 2rem 0 0 2rem;
+}
+.hw-area,
+.project-area {
+    background-color: #52796f;
+    margin: 2rem;
+    color: #cce3de;
+}
+.lab-area {
+    background-color: #555b6e;
+    margin: 2rem;
+    color: #cce3de;
+}
+.all-hw,
+.all-labs,
+.all-projects {
+    padding: 2rem;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
+.hw-unit,
+.project-unit {
+    background-color: #84a98c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.hw-unit a
+.lab-unit a,
+.project-unit a {
+    color: #cce3de;
+}
+.hw-unit img,
+.lab-unit img,
+.project-unit img{
+    max-width: 100%;
+}
+.lab-unit {
+    background-color: #84a98c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2f3e46;
+    color: #cce3de;
+}

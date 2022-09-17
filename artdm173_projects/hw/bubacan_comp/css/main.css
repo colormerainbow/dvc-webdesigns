@@ -1,0 +1,221 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Patua+One);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Your CSS goes here */
+
+body {
+    background-image:url(../images/grass.jpg);
+}
+header {
+   background-color: black;
+    opacity: 0.75;
+    color: white;
+    text-align: center;
+    padding: .5rem 2rem;
+    font-family: 'Patua One', cursive;
+ }
+.tagline {
+    color:#fcca46;
+    text-transform: uppercase;
+    font-size: 110%;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 1rem;
+}
+
+.site-nav a {
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.site-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding-bottom: 1rem;
+}
+#home .home-pg {
+    text-decoration: none;
+    color: #a7c957;
+    border-top: 2px solid;
+}
+.main-img {
+    border: solid gold;
+    border-radius:50%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 40%;
+    max-width: 55%;
+    /* attempt to move logo image up
+    margin-top: -10rem;
+    position: relative;
+    */
+}
+main {
+    font-family: 'Lato', sans-serif;
+}
+h2 {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+article {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    padding-bottom: 2rem;
+    /* attempt to move logo image up
+    padding-top: -5rem;
+    background-origin: padding-box;
+    */
+}
+
+.grass {
+    padding-top: 5rem;
+}
+.intro p {
+    color: #354f52;
+    padding: 0 3rem 2rem 3rem;
+}
+
+/*style the box of services */
+.services {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #b3d6c6;
+    border-radius: 15px 0px 20px 60px;
+    box-shadow: 3px 5px hsla(25, 9%, 25%, .65);
+    padding: .5rem 2rem 2rem 2rem;
+    color: #354f52;
+}
+
+.service-title {
+    font-weight:bolder;
+    color: black;
+}
+.services ul{
+    padding: .5rem 1rem;
+}
+.services ul li {
+    padding: .2rem;
+}
+
+/*contact info */
+.contact {
+    background-color: #344e41;
+    color: #fcca46;
+    padding: 1rem;
+    margin: 0;
+}
+.contact-title {
+    text-shadow:  3px 3px hsla(25, 9%, 25%, .65);
+}
+
+.phone {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+.phone a {
+    color: #fcca46;
+ //   font-weight:bold;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem 5rem;
+}
+
+.social-media img {
+    width: 15%;
+}
+/* footer section */
+footer {
+    text-align: center;
+    color: #fcca46;
+    background-color: #132a13;
+    font-family: 'Lato', sans-serif;
+    padding: 1rem;
+}
+
+/* style changes for  wider screens */
+@media only screen and (min-width: 600px) {
+    .main-img {
+        max-width: 50%;
+    }
+    h1 {
+        font-size: 230%;
+        padding: 1rem 3rem 0rem 3rem;
+    }
+    h2 {
+        font-size: 160%;
+    }
+    .tagline {
+        font-size: 120%;
+    }
+    .site-nav li a {
+        font-size: 120%;
+    }
+    .site-nav ul {
+        padding: 0 5rem 1rem 5rem;
+    }
+    .intro {
+        padding: .5rem 3rem;
+    }
+
+    .social-media {
+        min-width: 30%;
+        max-width: 70%;
+        margin: auto;
+    }
+
+    }
+
+
+/* style changes for even wider screens */
+@media only screen and (min-width: 800px) {
+    .main-img {
+        max-width: 30%;
+    }
+    h1 {
+        font-size: 300%;
+        padding: 2rem 5rem 0rem 5rem;
+    }
+    h2 {
+        font-size: 180%;
+    }
+    .tagline {
+        font-size: 120%;
+    }
+    .site-nav li a {
+        font-size: 130%;
+    }
+    .site-nav ul {
+        padding: 0 10rem 1rem 10rem;
+    }
+    .intro p {
+        padding: .5rem 5rem 3rem 5rem;
+        font-size: 120%;
+    }
+    .services {
+        margin: 0 5rem;
+        font-size: 120%;
+    }
+
+    .social-media {
+        min-width: 30%;
+        max-width: 55%;
+        margin: auto;
+    }
+
+
+    }
+
+
+
