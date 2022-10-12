@@ -8,21 +8,27 @@
     }
     
     body {
-        margin:5rem;
         background:#000000;
         color:#ffffff;
+        background-image: linear-gradient(to bottom right, #000000 40%, #457b9d);
+    }
+
+    main {
+        margin:5rem;
     }
 
 /* Use Flexbox to format the header */
     header {
-        background:#333;
+        background: #1d3557;
+        background-image: linear-gradient(to left, #000000 30%, #457b9d);
+        padding: 1rem;
     }
     .head-banner {
         display:flex;
         align-items:center;
     }
     header h1 {
-        color:#b6cb7c;
+        color:#a8dadc;
         margin: auto;
         font-family: 'Merriweather', serif;
         font-size: clamp(1.8rem, 10vw, 2.8rem);
@@ -32,7 +38,8 @@
         margin-right:2rem;
       }
     nav {
-        background:#222;
+        background:#457b9d;
+        margin: 1rem;
     }
     .site-nav a {
         color: white;
@@ -40,6 +47,7 @@
         display:block;
         margin: 1rem;
         text-decoration:none;
+        cursor: pointer;
     }
     
     .site-nav ul {
@@ -56,36 +64,11 @@
         border-top: 2px solid;
     }
 
-    /* hero image setup for css filter blend mode*/
+    /* hero image setup for main page message using clip-path and shape-outside */
 
-    .sneakpeek {
-        width:800px;
-        margin-bottom:5rem;
-        background: green url("images/heroscene.jpg") fixed no-repeat center/cover;
-    }
-
-    figcaption {
-        background:white;
-        padding:.25rem;
-        color: #555;
-    }
-    /* hero image setup for clip path
-    .circle {
-        margin: 600px 10px 600px 150px;
-        width:500px;
-        height:500px;
-        float: left;
-        background: url("../images/heroscene.jpg") fixed center;
-        background-size:cover;
-        -webkit-clip-path: circle(50%);
-      clip-path: circle(50%);
-      shape-outside: circle ();
-      }
-      */
-
-
+ 
       .circle {
-        margin: 2rem 5rem 2rem 5rem;
+        margin: 2rem;
         float: left;
         width:500px;
         height:500px;
@@ -96,18 +79,16 @@
       shape-outside: circle();
       }
 
-.explain {
-    padding: 350px 50px 500px 50px;
+.intro {
+    padding: 350px 0 500px 0;
+    width: 70%;
+    margin: auto;
+    max-width: 1200px;
 }
 
-
-x
-
-
-
-
-/* Use CSS Grid to format the amenities section */
-
+main {
+    margin-bottom: 5rem;
+}
  main h2 {
     margin:0;
     font-family: 'Merriweather', serif;
@@ -116,8 +97,7 @@ x
     padding-bottom: .5rem;
   }
   
-  /*should this be main figure? */
- main img {
+  main img {
     object-fit:cover;
     width:100%;
     height:100%;
@@ -127,15 +107,17 @@ x
   font-family: 'Lato', sans-serif;
   line-height: 1.3rem;
  }
- 
-/* Explicit layout of grid  */
-.amenities {
+
+/* Explicit layout of grid using CSS Grid */
+.packages {
     display:grid;
-    grid-gap:.5rem;
+    grid-gap: 2rem;
     grid-template-areas: 
     "a b c"
     "d f f" 
-    "e f f"; 
+    "e g g"
+    "h j j"
+    "k m m"; 
  }
 
  .a {
@@ -153,74 +135,84 @@ x
   .e {
     grid-area: e;
   }
-  .f {
-    grid-area: f;
-    padding: 2rem;
-  }
-  .g {
-    grid-area: g;
-  }
   .h {
     grid-area: h;
-  }
-/* Explicit layout of grid  
- main {
-    display:grid;
-    grid-gap:.5rem;
-    grid-template-areas: 
-    "a b c d" 
-    "e f f g" 
-    "h i j k"; 
- }
-  
-  .a {
-    grid-area: a;
-  }
-  .b {
-    grid-area: b;
-  }
-  .c {
-    grid-area: c;
-  }
-  .d {
-    grid-area: d;
-  }
-  .e {
-    grid-area: e;
-  }
-  .f {
-    grid-area: f;
-    padding: 2rem;
-  }
-  .g {
-    grid-area: g;
-  }
-  .h {
-    grid-area: h;
-  }
-  .i {
-    grid-area: i;
-  }
-  .j {
-    grid-area: j;
   }
   .k {
     grid-area: k;
   }
-  */
+  .f {
+    grid-area: f;
+    padding: 2rem;
+  }
+  .g {
+    grid-area: g;
+    padding: 2rem;
+  }
+  .j {
+    grid-area: j;
+    padding: 2rem;
+  }
+  .m {
+    grid-area: m;
+    padding: 2rem;
+  }
+
+  /* Apply Filter Blend mode with the logo */
+  figure {
+    width:150px;
+  }
+
+  .blend img:hover {mix-blend-mode: overlay;}
+  .blend2 img:hover {mix-blend-mode: difference;}
+
+  .multiply img:hover {mix-blend-mode: multiply;}
+  .screen img:hover {mix-blend-mode: screen;}
+  .overlay img:hover {mix-blend-mode: overlay;}
+  .difference img:hover {mix-blend-mode: difference;}
+  .hue2 img:hover {mix-blend-mode: hue;}
+  .saturation img:hover {mix-blend-mode: saturation;}
+  .color img:hover {mix-blend-mode: color;}
+  .luminosity img:hover {mix-blend-mode: luminosity;}
+
+  /* Apply CSS Mask to images */
+
+  .cssMask1 {
+    -webkit-mask-image: radial-gradient(ellipse 90% 95% at 50% 50%, black 15%, transparent 60%);
+  mask-image: radial-gradient(ellipse 90% 95% at 50% 50%, black 40%, transparent 60%);
+      -webkit-mask-mode: luminance;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center center;
+  }
+
+  /* Apply CSS Filters */
+
+  .opacity img:hover {filter:opacity(25%);}
+  .grey img:hover {filter:grayscale(100%);}
+  .blend img:hover {filter: drop-shadow(8px 8px 10px #972d07);}
+  .hue img:hover {filter: hue-rotate(90deg);}
+  .blur img:hover {filter: blur(5px);}
+  .combo img:hover {filter: sepia(50%) contrast(105%)}
+
+/* Format for different screens, also mod for small screens
 
   @media only screen and (min-width: 600px) {
 
-    /*
     .f {
       transform: rotate(-5deg);
     }
-    */
   }
+  */
 
   /* Footer */
-  footer {
-    text-align: center;
-    padding: 3rem;
-    font-family: 'Lato', sans-serif;
-  }
+footer {
+    background: url("../../flex_grid_lab/images/zen_garden.jpeg") no-repeat center/cover;
+    display: flex;     
+    flex-direction:row;
+    justify-content: start;
+    align-items:flex-end;
+    color: #000000;
+    margin: 0;
+    padding: 6rem 2rem 2rem 2rem;
+}
