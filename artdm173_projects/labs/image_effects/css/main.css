@@ -1,5 +1,7 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fresca&family=Lato:wght@300;400;700&family=Marcellus+SC&family=Poppins:ital,wght@0,400;0,500;0,800;1,400&family=Rock+Salt&display=swap');
+
 
     * {
         margin: 0;
@@ -30,7 +32,8 @@
     header h1 {
         color:#a8dadc;
         margin: auto;
-        font-family: 'Merriweather', serif;
+        font-family: 'Marcellus SC', serif;
+
         font-size: clamp(1.8rem, 10vw, 2.8rem);
     }
     .logo {
@@ -63,6 +66,13 @@
         color: #a7c957;
         border-top: 2px solid;
     }
+    .m_title {
+        margin: auto;
+        text-align: center;
+        font-family: 'Rock Salt', cursive;
+        font-size: 3rem;
+    }
+
 
     /* hero image setup for main page message using clip-path and shape-outside */
 
@@ -91,12 +101,17 @@ main {
 }
  main h2 {
     margin:0;
-    font-family: 'Merriweather', serif;
-    font-size: 1.9rem;
+ font-family: 'Marcellus SC', serif;
+    font-size: 2rem;
     color: #fdfee6;
     padding-bottom: .5rem;
   }
   
+  .activities {
+    font-family: 'Fresca', sans-serif;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+  }
   main img {
     object-fit:cover;
     width:100%;
@@ -104,8 +119,10 @@ main {
  }
  
  main p {
-  font-family: 'Lato', sans-serif;
-  line-height: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-top: .5rem;
  }
 
 /* Explicit layout of grid using CSS Grid */
@@ -178,8 +195,8 @@ main {
   /* Apply CSS Mask to images */
 
   .cssMask1 {
-    -webkit-mask-image: radial-gradient(ellipse 90% 95% at 50% 50%, black 15%, transparent 60%);
-  mask-image: radial-gradient(ellipse 90% 95% at 50% 50%, black 40%, transparent 60%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 15%, transparent 55%);
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 40%, transparent 60%);
       -webkit-mask-mode: luminance;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-size: contain;
@@ -215,4 +232,6 @@ footer {
     color: #000000;
     margin: 0;
     padding: 6rem 2rem 2rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
 }
