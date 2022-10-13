@@ -3,80 +3,333 @@
 @import url('https://fonts.googleapis.com/css2?family=Fresca&family=Lato:wght@300;400;700&family=Marcellus+SC&family=Poppins:ital,wght@0,400;0,500;0,800;1,400&family=Rock+Salt&display=swap');
 
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    background-image: linear-gradient(to bottom right, #000000 40%, #457b9d);
+}
+
+main {
+    margin: 2rem;
+}
+
+/* Use Flexbox to format the header */
+header {
+    background: #1d3557;
+    background-image: linear-gradient(to left, #000000 30%, #457b9d);
+    padding: 1rem;
+}
+
+.head-banner {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: #a8dadc;
+    margin: auto;
+    font-family: 'Marcellus SC', serif;
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+}
+
+.logo {
+    display: block;
+    margin-right: 2rem;
+}
+
+nav {
+    background: #457b9d;
+    margin: 1rem;
+}
+
+.site-nav a {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: block;
+    margin: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add interactive transition effects for nav bar */
+.site-nav li {
+    transition: all .5s ease-in-out;
+}
+
+.site-nav li:hover {
+    transform: scale(1.2) skewX(-5deg) translateX(1px);
+}
+
+#home .home-pg {
+    text-decoration: none;
+    color: #a7c957;
+    border-top: 2px solid;
+}
+
+.m_title {
+    margin: auto;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 3rem;
+}
+
+
+/* hero image setup for sneak peek in main message */
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background: url("../images/heroscene.jpg") fixed center;
+    background-size: cover;
+    -webkit-clip-path: circle(50%);
+    clip-path: circle(50%);
+}
+
+.intro {
+    margin: auto;
+    max-width: 80%;
+}
+
+main {
+    margin-bottom: 5rem;
+}
+
+main h2 {
+    margin: 0;
+    font-family: 'Marcellus SC', serif;
+    font-size: 2rem;
+    color: #fdfee6;
+    padding-bottom: .5rem;
+}
+
+.activities {
+    font-family: 'Fresca', sans-serif;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+main img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+main p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding-top: .5rem;
+}
+
+/* Explicit layout of grid using CSS Grid */
+.packages {
+    padding-top: 5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+        "a b c"
+        "d f f"
+        "e g g"
+        "h j j"
+        "k m m";
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.h {
+    grid-area: h;
+}
+
+.k {
+    grid-area: k;
+}
+
+.f {
+    grid-area: f;
+    padding: 2rem;
+}
+
+.g {
+    grid-area: g;
+    padding: 2rem;
+}
+
+.j {
+    grid-area: j;
+    padding: 2rem;
+}
+
+.m {
+    grid-area: m;
+    padding: 2rem;
+}
+
+/* Apply Filter Blend mode with the logo and other image effects to images in the packages section */
+figure {
+    width: 150px;
+}
+
+.blend img:hover {
+    mix-blend-mode: overlay;
+}
+
+.blend2 img:hover {
+    mix-blend-mode: difference;
+}
+
+.multiply img:hover {
+    mix-blend-mode: multiply;
+}
+
+.screen img:hover {
+    mix-blend-mode: screen;
+}
+
+.overlay img:hover {
+    mix-blend-mode: overlay;
+}
+
+.difference img:hover {
+    mix-blend-mode: difference;
+}
+
+.hue2 img:hover {
+    mix-blend-mode: hue;
+}
+
+.saturation img:hover {
+    mix-blend-mode: saturation;
+}
+
+.color img:hover {
+    mix-blend-mode: color;
+}
+
+.luminosity img:hover {
+    mix-blend-mode: luminosity;
+}
+
+/* Apply CSS Mask to images in packages section */
+
+.cssMask1 {
+    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 15%, transparent 55%);
+    mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 40%, transparent 60%);
+    -webkit-mask-mode: luminance;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center center;
+}
+
+/* Apply more CSS Filters to different images */
+
+.opacity img:hover {
+    filter: opacity(25%);
+}
+
+.grey img:hover {
+    filter: grayscale(100%);
+}
+
+.blend img:hover {
+    filter: drop-shadow(8px 8px 10px #972d07);
+}
+
+.hue img:hover {
+    filter: hue-rotate(90deg);
+}
+
+.blur img:hover {
+    filter: blur(5px);
+}
+
+.combo img:hover {
+    filter: sepia(50%) contrast(105%)
+}
+
+/* Format for different screens, also mod for small screens */
+
+@media only screen and (min-width: 500px) {
+
+    /* Hero image - widen peephole and then wrap text for shape-outside on larger screens */
+
+    .circle {
+        width: 400px;
+        height: 400px;
     }
-    
-    body {
-        background:#000000;
-        color:#ffffff;
-        background-image: linear-gradient(to bottom right, #000000 40%, #457b9d);
+    .intro h2 {
+        padding-top: 3rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    .circle {
+        margin: 2rem 2rem 2rem 0;
+        float: left;
+        width: 500px;
+        height: 500px;
+        shape-outside: circle();
+    }
+
+    .intro {
+        max-width: 70%;
     }
 
     main {
-        margin:5rem;
+        margin: 5rem;
     }
+}
 
-/* Use Flexbox to format the header */
-    header {
-        background: #1d3557;
-        background-image: linear-gradient(to left, #000000 30%, #457b9d);
-        padding: 1rem;
-    }
-    .head-banner {
-        display:flex;
-        align-items:center;
-    }
-    header h1 {
-        color:#a8dadc;
-        margin: auto;
-        font-family: 'Marcellus SC', serif;
-
-        font-size: clamp(1.8rem, 10vw, 2.8rem);
-    }
-    .logo {
-        display:block;
-        margin-right:2rem;
-      }
-    nav {
-        background:#457b9d;
-        margin: 1rem;
-    }
-    .site-nav a {
-        color: white;
-        font-family: 'Lato', sans-serif;
-        display:block;
-        margin: 1rem;
-        text-decoration:none;
-        cursor: pointer;
-    }
-    
-    .site-nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        list-style: none;
-        padding:0;
-        margin:0;
-    }
-    #home .home-pg {
-        text-decoration: none;
-        color: #a7c957;
-        border-top: 2px solid;
-    }
-    .m_title {
-        margin: auto;
-        text-align: center;
-        font-family: 'Rock Salt', cursive;
-        font-size: 3rem;
-    }
+/* Footer */
+footer {
+    background: url("../../flex_grid_lab/images/zen_garden.jpeg") no-repeat center/cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-end;
+    color: #000000;
+    margin: 0;
+    padding: 6rem 2rem 2rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
 
 
-    /* hero image setup for main page message using clip-path and shape-outside */
+/* the magic behind the sneakpeek at larger screen sizes - code applied in different areas above as screen size increases
 
- 
       .circle {
         margin: 2rem;
         float: left;
@@ -85,153 +338,8 @@
         background: url("../images/heroscene.jpg") fixed center;
         background-size:cover;
         -webkit-clip-path: circle(50%);
-      clip-path: circle(50%);
-      shape-outside: circle();
+    clip-path: circle(50%);
+        shape-outside: circle();
       }
 
-.intro {
-    padding: 350px 0 500px 0;
-    width: 70%;
-    margin: auto;
-    max-width: 1200px;
-}
-
-main {
-    margin-bottom: 5rem;
-}
- main h2 {
-    margin:0;
- font-family: 'Marcellus SC', serif;
-    font-size: 2rem;
-    color: #fdfee6;
-    padding-bottom: .5rem;
-  }
-  
-  .activities {
-    font-family: 'Fresca', sans-serif;
-    font-size: 1.5rem;
-    padding-top: 2rem;
-  }
-  main img {
-    object-fit:cover;
-    width:100%;
-    height:100%;
- }
- 
- main p {
-    font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  padding-top: .5rem;
- }
-
-/* Explicit layout of grid using CSS Grid */
-.packages {
-    display:grid;
-    grid-gap: 2rem;
-    grid-template-areas: 
-    "a b c"
-    "d f f" 
-    "e g g"
-    "h j j"
-    "k m m"; 
- }
-
- .a {
-    grid-area: a;
-  }
-  .b {
-    grid-area: b;
-  }
-  .c {
-    grid-area: c;
-  }
-  .d {
-    grid-area: d;
-  }
-  .e {
-    grid-area: e;
-  }
-  .h {
-    grid-area: h;
-  }
-  .k {
-    grid-area: k;
-  }
-  .f {
-    grid-area: f;
-    padding: 2rem;
-  }
-  .g {
-    grid-area: g;
-    padding: 2rem;
-  }
-  .j {
-    grid-area: j;
-    padding: 2rem;
-  }
-  .m {
-    grid-area: m;
-    padding: 2rem;
-  }
-
-  /* Apply Filter Blend mode with the logo */
-  figure {
-    width:150px;
-  }
-
-  .blend img:hover {mix-blend-mode: overlay;}
-  .blend2 img:hover {mix-blend-mode: difference;}
-
-  .multiply img:hover {mix-blend-mode: multiply;}
-  .screen img:hover {mix-blend-mode: screen;}
-  .overlay img:hover {mix-blend-mode: overlay;}
-  .difference img:hover {mix-blend-mode: difference;}
-  .hue2 img:hover {mix-blend-mode: hue;}
-  .saturation img:hover {mix-blend-mode: saturation;}
-  .color img:hover {mix-blend-mode: color;}
-  .luminosity img:hover {mix-blend-mode: luminosity;}
-
-  /* Apply CSS Mask to images */
-
-  .cssMask1 {
-    -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 15%, transparent 55%);
-  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 40%, transparent 60%);
-      -webkit-mask-mode: luminance;
-      -webkit-mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      -webkit-mask-position: center center;
-  }
-
-  /* Apply CSS Filters */
-
-  .opacity img:hover {filter:opacity(25%);}
-  .grey img:hover {filter:grayscale(100%);}
-  .blend img:hover {filter: drop-shadow(8px 8px 10px #972d07);}
-  .hue img:hover {filter: hue-rotate(90deg);}
-  .blur img:hover {filter: blur(5px);}
-  .combo img:hover {filter: sepia(50%) contrast(105%)}
-
-/* Format for different screens, also mod for small screens
-
-  @media only screen and (min-width: 600px) {
-
-    .f {
-      transform: rotate(-5deg);
-    }
-  }
-  */
-
-  /* Footer */
-footer {
-    background: url("../../flex_grid_lab/images/zen_garden.jpeg") no-repeat center/cover;
-    display: flex;     
-    flex-direction:row;
-    justify-content: start;
-    align-items:flex-end;
-    color: #000000;
-    margin: 0;
-    padding: 6rem 2rem 2rem 2rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-}
+      */
