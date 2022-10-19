@@ -107,9 +107,11 @@ body {
     display:grid;
     grid-gap: 2rem;
     grid-template-areas: 
-    "a a b b" 
-    "c c d d"
-    "e e f f";
+    "a a" 
+    "b b" 
+    "c c"
+    "d d" 
+    "e e";
  }
   
   .a {
@@ -130,8 +132,8 @@ body {
 
 
   .obj { 
-    width: 600px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     padding: 2rem;
 }
 .obja {
@@ -169,6 +171,29 @@ body {
 }
 
 
+@media only screen and (min-width: 900px) {
+
+    /* Explicit layout of grid for Object-Fit Demo*/
+ .main-obj {
+    padding: 3rem;
+    max-width: 80%;
+    margin: auto;
+    display:grid;
+    grid-gap: 2rem;
+    grid-template-areas: 
+    "a a b b" 
+    "c c d d"
+    "e e f f";
+ }
+
+ .obj { 
+    width: 500px;
+    height: 400px;
+    padding: 2rem;
+}
+}
+
+
 @media only screen and (min-width: 1200px) {
     .hero-image {
         height: 1000px;
@@ -179,6 +204,12 @@ body {
       .hero-text {
         color: #ffbe0b;
       }
+
+      .obj { 
+        width: 700px;
+        height: 500px;
+        padding: 2rem;
+    }
 
 }
 
