@@ -65,9 +65,17 @@ nav {
 
 body {
     margin: 0;
+    background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  .main-svg {
+    background-image: url(../images/bluewave.svg);
+    background-repeat: repeat;
+    background-size: 50px 25px;
+  }
   
+
   button {
     padding: .5rem;
     font-family: 'Poppins', sans-serif;
@@ -98,10 +106,17 @@ body {
   .about li {
     margin-left: 3rem;
   }
+  .about h2 {
+    padding-bottom: 1rem;
+  }
+  .about p {
+    padding-bottom: .5rem;
+  }
 
   /* Explicit layout of grid (Object-Fit section)*/
  .main-obj {
     padding: 3rem;
+    color: #edede9;
     display:grid;
     grid-gap: 1rem;
     grid-template-areas: 
@@ -155,10 +170,15 @@ body {
   .main-srcset {
     max-width: 1900px;
     margin: auto;
+    color: #edede9;
+  }
+  .main-srcset p {
+    padding: 1rem 0;
   }
   .src_img {
     display: block;
     width: 100%;
+    padding-bottom: 1rem;
   }
   /* css specific to picture page */
   .pic_h1 {
@@ -205,11 +225,15 @@ body {
     width: 550px;
     height: 400px;
 }
+
+.main-svg {
+  background-size: 100px 50px;
+}
 /*
 .main-srcset {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+//  grid-gap: 1rem;
 }
 */
 }
@@ -233,16 +257,14 @@ body {
         width: 700px;
         height: 500px;
     }
+
+    .main-srcset {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
 }
 
-@media only screen and (min-width: 1600px) {
-  .main-srcset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-  }
-  }
-  
 
 /* Footer */
 footer {
