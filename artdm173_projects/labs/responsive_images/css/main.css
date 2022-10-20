@@ -12,7 +12,8 @@ html {
   --base-color: #457b9d;
   --light-font-color: #edede9;
   --about-wall: #d9d9d9;
-  --accent-color: #006077;
+  --accent-color: #000000;
+  --prev-accent-color: #006077;
   --lite-accent-color: #84A98C;
 }
 
@@ -33,7 +34,7 @@ header h1 {
     font-size: clamp(1.8rem, 10vw, 2.8rem);
 }
 nav {
-    background: var(--accent-color);
+    background: var(--base-color);
     margin: 1rem;
 }
 
@@ -90,6 +91,7 @@ body {
   
 
   button {
+    margin-top: 1rem;
     padding: .5rem;
     font-family: 'Poppins', sans-serif;
   }
@@ -131,7 +133,7 @@ body {
     padding: 3rem;
     color: var(--light-font-color);
     display:grid;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     grid-template-areas: 
     "a a" 
     "b b" 
@@ -186,23 +188,25 @@ body {
     color: var(--light-font-color);
     padding-bottom: 2rem;
   }
-  .main-srcset h2,
+  .main-srcset h2 {
+    margin: 1rem 0 .5rem 1rem;
+  }
   .main-srcset p {
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem;
   }
   .src_img {
     display: block;
     width: 100%;
- //   padding-bottom: 1rem;
   }
   /* css specific to picture page */
   .pic_h1 {
     font-size: 40px;
     text-align: center;
+    padding-bottom: 1rem;
   }
   .picture-text {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     color: var(--light-font-color);
   }
   .picture_img {

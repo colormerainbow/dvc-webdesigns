@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Responsive Images Lab ARTDM-173</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body id="srcsetdemo">
     <header>
         <div class="head-banner">
@@ -26,43 +28,24 @@
         </nav>
     </header>
 
-    <main class="main-srcset">  
-        
-    <section>
+    <main class="main-srcset">
 
-
-<!-- srcset for test2
-            <img class="src_img"
-            sizes="(max-width: 960px) 100vw, 960px"
-            srcset="
-            images/turtle_jveo02_c_scale,w_400.jpg 400w,
-            images/turtle_jveo02_c_scale,w_633.jpg 633w,
-            images/turtle_jveo02_c_scale,w_826.jpg 826w,
-            images/turtle_jveo02_c_scale,w_960.jpg 960w"
-            src="images/turtle_jveo02_c_scale,w_960.jpg"
-            alt="sea turtle 2">
-            <h2>Meet Tom the Sea Turtle</h2>
-            <p>He is swimming here in his natural habitat.</p>
--->
-            <img class="src_img"
-            sizes="(max-width: 1920px) 100vw, 1920px"
-            srcset="
+        <section>
+            <img class="src_img" sizes="(max-width: 1920px) 100vw, 1920px" srcset="
             images/turtle_jveo02_c_scale,w_600.jpg 600w,
             images/turtle_jveo02_c_scale,w_1234.jpg 1234w,
             images/turtle_jveo02_c_scale,w_1607.jpg 1607w,
-            images/turtle_jveo02_c_scale,w_1920.jpg 1920w"
+            images/turtle_jveo02_c_scale,w_1920.jpg 1920w" 
             src="images/turtle_jveo02_c_scale,w_600.jpg"
-            alt="sea turtle">
+                alt="sea turtle">
             <h2>Meet Seymore the Sea Turtle</h2>
             <p>He is swimming here in his natural habitat.
             </p>
 
-            
         </section>
-          
 
-<!--
-        <picture>
+
+        <!-- alternative if using picture tags
             <img
             sizes="(max-width: 1920px) 100vw, 1920px"
             srcset="
@@ -74,28 +57,27 @@
             alt="">
             </picture>
             
--->            
-    
-
-    <section>
-
-        <img class="src_img"
-        sizes="(max-width: 1920px) 100vw, 1920px"
-        srcset="
-        images/crosssection_tf1muq_c_scale,w_600.jpg 600w,
-        images/crosssection_tf1muq_c_scale,w_1230.jpg 1230w,
-        images/crosssection_tf1muq_c_scale,w_1670.jpg 1670w,
-        images/crosssection_tf1muq_c_scale,w_1992.jpg 1920w"
-        src="images/crosssection_tf1muq_c_scale,w_600.jpg"
-        alt="under the waves">
+-->
 
 
-        <h2>Under the Waves</h2>
-        <p>Explore the world on the other side of the waves. The biodiversity here reveals how the other side lives in a world submerged in the ocean.</p>
+        <section>
 
-    </section>
+            <img class="src_img" sizes="(max-width: 1920px) 100vw, 1920px" srcset="
+            images/crosssection_tf1muq_c_scale,w_600.jpg 600w,
+            images/crosssection_tf1muq_c_scale,w_1230.jpg 1230w,
+            images/crosssection_tf1muq_c_scale,w_1670.jpg 1670w,
+            images/crosssection_tf1muq_c_scale,w_1992.jpg 1920w" 
+            src="images/crosssection_tf1muq_c_scale,w_600.jpg"
+            alt="under the waves">
 
-<!-- original code
+
+            <h2>Under the Waves</h2>
+            <p>Explore the world on the other side of the waves. The biodiversity here reveals how the other side lives
+                in a world submerged in the ocean.</p>
+
+        </section>
+
+        <!-- original code but modified to above to try to get the image size to match the turtle in side by side mode
     <section>
 
         <img class="src_img"
@@ -115,24 +97,29 @@
     </section>
 
     -->
-</main>
+    </main>
 
     <div class="about">
-        <h2>Demonstrating responsive background image using srcset and sizes attributes to create responsive images.</h2>
+        <h2>Demonstrating responsive background image using srcset and sizes attributes to create responsive images.
+        </h2>
         <p>Srcset tool was used to generate 4 breakpoints in each of the original images.</p>
 
-          <p>Observe how lower resolution images are downloaded when smaller screens are used. Larger resolution images are only downloaded for users with larger screens, saving on bandwidth as well as improving site responsiveness.</p>
-          <p>Observe how the images are presented side by side by the use of a media query for larger screens.</p>
-          <p>Credit: responsivebreakpoints.com</p>
+        <p>Observe how lower resolution images are downloaded when smaller screens are used. Larger resolution images
+            are only downloaded for users with larger screens, saving on bandwidth as well as improving site
+            responsiveness.</p>
+        <p>On extra large screens, the highest resolution images are downloaded to present the clearest picture without blur or pixelization.</p>
+            
+        <p>Observe how the images are presented side by side by the use of a media query for larger screens.</p>
+        <p>Credit: responsivebreakpoints.com</p>
     </div>
 
 
 
 
-<footer>
-  <p>&copy; 2022 Margaret Au Educational Assets</p>
+    <footer>
+        <p>&copy; 2022 Margaret Au Educational Assets</p>
 
-</footer>
+    </footer>
 </body>
 
 </html>
