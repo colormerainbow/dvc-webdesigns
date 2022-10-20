@@ -8,6 +8,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  --base-color: #457b9d;
+  --light-font-color: #edede9;
+  --about-wall: #d9d9d9;
+  --accent-color: #006077;
+  --lite-accent-color: #84A98C;
+}
 
 /* Use Flexbox to format the header */
 header {
@@ -26,7 +33,7 @@ header h1 {
     font-size: clamp(1.8rem, 10vw, 2.8rem);
 }
 nav {
-    background: #457b9d;
+    background: var(--accent-color);
     margin: 1rem;
 }
 
@@ -57,15 +64,21 @@ nav {
     transform: scale(1.2) skewX(-5deg) translateX(1px);
 }
 
-#home .home-pg {
+#home .home-pg,
+#object .obj-pg,
+#srcsetdemo .src-pg,
+#picture .picture-pg,
+#svg .svg-pg {
     text-decoration: none;
     color: #a7c957;
     border-top: 2px solid;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 body {
     margin: 0;
-    background-color: #000000;
+    background-color: var(--accent-color);
     font-family: Arial, Helvetica, sans-serif;
   }
 
@@ -96,11 +109,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #edede9;
+    color: var(--light-font-color);
     text-shadow: 3px 3px #000000;
   }
   .about {
-    background-color: #c9ada7;
+    background-color: var(--about-wall);
     padding: 2rem;
   }
   .about li {
@@ -116,7 +129,7 @@ body {
   /* Explicit layout of grid (Object-Fit section)*/
  .main-obj {
     padding: 3rem;
-    color: #edede9;
+    color: var(--light-font-color);
     display:grid;
     grid-gap: 1rem;
     grid-template-areas: 
@@ -170,15 +183,17 @@ body {
   .main-srcset {
     max-width: 1900px;
     margin: auto;
-    color: #edede9;
+    color: var(--light-font-color);
+    padding-bottom: 2rem;
   }
+  .main-srcset h2,
   .main-srcset p {
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 1rem;
   }
   .src_img {
     display: block;
     width: 100%;
-    padding-bottom: 1rem;
+ //   padding-bottom: 1rem;
   }
   /* css specific to picture page */
   .pic_h1 {
@@ -188,6 +203,7 @@ body {
   .picture-text {
     text-align: center;
     padding: 1rem;
+    color: var(--light-font-color);
   }
   .picture_img {
     display: block;
@@ -268,8 +284,9 @@ body {
 
 /* Footer */
 footer {
-    background-color: #9a8c98;
-    color: #000000;
+    background-color: #000000;
+    background-image: linear-gradient(to right, #000000 10%, #457b9d);
+    color: var(--light-font-color);
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
