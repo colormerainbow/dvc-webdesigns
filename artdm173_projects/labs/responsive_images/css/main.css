@@ -245,13 +245,7 @@ body {
 .main-svg {
   background-size: 100px 50px;
 }
-/*
-.main-srcset {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-//  grid-gap: 1rem;
-}
-*/
+
 }
 
 @media only screen and (min-width: 1400px) {
