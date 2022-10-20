@@ -99,13 +99,11 @@ body {
     margin-left: 3rem;
   }
 
-  /* For the Object.html section */
-
-  /* Explicit layout of grid  */
+  /* Explicit layout of grid (Object-Fit section)*/
  .main-obj {
     padding: 3rem;
     display:grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-areas: 
     "a a" 
     "b b" 
@@ -130,11 +128,9 @@ body {
     grid-area: e;
   }
 
-
   .obj { 
     width: 400px;
     height: 300px;
-    padding: 2rem;
 }
 .obja {
     object-fit: cover;
@@ -155,6 +151,16 @@ body {
     object-fit: cover;
   }
 
+  /* css specific to srcset page */
+  .main-srcset {
+    max-width: 1900px;
+    margin: auto;
+  }
+  .src_img {
+    display: block;
+    width: 100%;
+  }
+
 
 @media only screen and (min-width: 700px) {
     .hero-image {
@@ -171,15 +177,11 @@ body {
 }
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 960px) {
 
     /* Explicit layout of grid for Object-Fit Demo*/
  .main-obj {
-    padding: 3rem;
-    max-width: 80%;
-    margin: auto;
     display:grid;
-    grid-gap: 2rem;
     grid-template-areas: 
     "a a b b" 
     "c c d d"
@@ -187,14 +189,19 @@ body {
  }
 
  .obj { 
-    width: 500px;
+    width: 550px;
     height: 400px;
-    padding: 2rem;
 }
+/*
+.main-srcset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+*/
 }
 
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
     .hero-image {
         height: 1000px;
         background-position: center top;
@@ -205,13 +212,24 @@ body {
         color: #ffbe0b;
       }
 
+      .main-obj {
+        max-width: 80%;
+        margin: auto;
+      }
       .obj { 
         width: 700px;
         height: 500px;
-        padding: 2rem;
     }
-
 }
+
+@media only screen and (min-width: 1600px) {
+  .main-srcset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  }
+  
 
 /* Footer */
 footer {
