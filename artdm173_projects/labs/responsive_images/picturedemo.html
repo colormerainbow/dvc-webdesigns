@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Images Lab ARTDM-173</title>
+    <title>Responsive Images Lab with picture and source elements ARTDM-173</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <header>
         <div class="head-banner">
             <h1>
-                Demonstration of Object Fit
+                Demonstration of Picture and Source Elements
             </h1>
         </div>
 
@@ -27,38 +27,38 @@
     </header>
 
     <main>  
-        
-    <section class="main-obj">
 
-          
-    <div class="a"><h3>Using object-fit: cover</h3><img class="obja obj"  src="images/lakelouise_sq.jpg" alt="">
-    </div>
-    <div class="b"><h3>Using object-fit: fill</h3><img class="objb obj" src="images/lakelouise_sq.jpg" alt="">
-    </div>
+            <div class="picture-text">
+              <h1 class="pic_h1">Explore the Space Needle</h1>
+              <h3>Seattle, Washington</h3>
+              <button>Plan my Visit</button>
+            </div>
+ 
+          <picture>
+            <source
+            media="(min-width:1001px)"
+            srcset="images/spaceneedle_2180.jpg">
+            <source
+                media="(min-width:701px)"
+                srcset="images/spaceneedle_mid1034.jpg">
 
-    <div class="c"><h3>Using object-fit: contain</h3><img class="objc obj" src="images/lakelouise_sq.jpg" alt="">
-    </div>
+            <source
+                media="(min-width:400px)"
+                srcset="images/spaceneedle_prt1.jpg">
 
-    <div class="d"><h3>Using object-fit: scale-down</h3><img class="objd obj" src="images/lakelouise_sq.jpg" alt="">
-    </div>
+            <source
+            media="orientation: portrait"
+            srcset="images/spaceneedle_prt1.jpg">
 
-    <div class="e"><h3>Using object-fit: none</h3><img class="obje obj"  src="images/lakelouise_sq.jpg" alt="">
-    </div>
-
-    </section>
+            <img class="picture_img" src="images/spaceneedle_mid1034.jpg" alt="The Space Needle in Seattle, Washington">
+        </picture>
 
 
     <div class="about">
-        <h2>Demonstrating responsive background image using various object-fit property values:</h2>
-          <ul>
-              <li>fill</li>
-              <li>contain</li>
-              <li>cover</li>
-              <li>scale-down</li>
-              <li>none</li>
-          </ul>
-          <p>Observe how the same image is rendered under the different object-fit settings.</p>
-          <p>Observe how the images are responsive based on the size of the screen, using media queries.</p>
+        <h2>Demonstrating responsive background image using picture and source elements, which drives art direction along with resolution switching.</h2>
+
+          <p>Observe how the images change based on the screen size used to view the site, giving the best resolution for the size.</p>
+          <p>Observe how the image also changes based on whether it is viewed in portrait vs landscape mode (aka art direction).</p>
     </div>
 
 
