@@ -11,6 +11,7 @@
 html {
   --color-near-black: #231f20;
   --color-white: #ffffff;
+  --color-lite-blue: #a8dadc;
 
   /*palette 1 cool theme */
   --color-rich-background: #d0d9cb;
@@ -29,148 +30,208 @@ html {
   */
                                
 }
+header {
+  color: var(--color-white);
+  background: #000000;
+ // background-image: linear-gradient(to right, #000000 30%, var(--color-white));
+  padding: 1rem;
+}
+.head-banner {
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  color: var(--color-white);
+  margin: auto;
+  font-family: 'Marcellus SC', serif;
+  font-size: clamp(1.8rem, 10vw, 2.8rem);
+}
+nav {
+  background: var(--base-color);
+  margin: 1rem;
+}
 
-/* home page hero image */
-.home-hero-image {
-    background-image: url("../images/illustration_hero2.webp");
+.site-nav a {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  display: block;
+  margin: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Add interactive transition effects for nav bar */
+.site-nav li {
+  transition: all .5s ease-in-out;
+}
+
+.site-nav li:hover {
+  transform: scale(1.2) skewX(-5deg) translateX(1px);
+}
+
+#home .home-pg,
+#web .web-pg,
+#photo .photo-pg,
+#illus .illus-pg,
+#expmt .expmt-pg,
+#more .more-pg {
+  text-decoration: none;
+  color: #a7c957;
+  border-top: 2px solid;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* landing page hero image */
+.lndg-hero-image {
+    background-image: url("../images/digart_splash3.jpeg");
     background-color: #cccccc;
-    height: 800px;
-    background-position: top center;
+    height: 500px;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
   }
+  .lndg-hero-text {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    text-shadow: 3px 3px #000000;
+  }
 
-  /* this needs work */
-  .intro-msg {
-    background-color: var(--color-rich-background);
+  .button1 {
+    background-color: var(--color-white);
+    border: none;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  /* landing page intro message */
+  .lndg-intro-msg {
+    font-family: 'Marcellus SC', serif;
+    font-size: 25px;
+    background-color: var(--color-white);
     padding: 2rem;
     text-align: center;
   }
-/*CSS Grid for Mosaic layout home page for highlights */
 
-.mosaic {
-    background-color: #d6ccc2;
-    padding: 2rem;
-  }
-  
-  .mosaic-section {
-    max-width: 940px;
+  /* css specific to home page */
+  .home-hero {
+    max-width: 1900px;
     margin: auto;
+    color: var(--light-font-color);
+    padding-bottom: 2rem;
   }
-  
-  .mosaic ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    grid-auto-rows: 80px;
-    grid-auto-flow: dense;
-    background: #1c1b1b;
+  .home-hero h2 {
+    margin: 1rem 0 .5rem 1rem;
   }
-  
-  .mosaic img {
+  .home-hero p {
+    padding: 1rem;
+  }
+  .home_img {
     display: block;
-    object-fit: cover;
-    height: 100%;
     width: 100%;
   }
-  
-  .mosaic ul,
-  .mosaic li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .mosaic li {
-    border: 6px solid black;
-  }
-  
-  .mosaic li:nth-child(1) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(2) {
-    grid-column: span 3;
-  }
-  
-  .mosaic li:nth-child(3) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(4) {
-    grid-column: span 6;
-  }
-  
-  .mosaic li:nth-child(5) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(6) {
-    grid-column: span 4;
-    grid-row: span 4;
-  }
-  
-  .mosaic li:nth-child(7) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .mosaic li:nth-child(8) {
-    grid-row: span 3;
-  }
-  
-  .mosaic li:nth-child(9) {
-    grid-row: span 2;
-  }
-  
-  .mosaic li:nth-child(10) {
-    grid-row: span 2;
-  }
-  
-  .mosaic li:nth-child(11) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .mosaic li:nth-child(12) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(13) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(14) {
-    grid-row: span 3;
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(15) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(16) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .mosaic li:nth-child(17) {
-    grid-row: span 3;
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(18) {
-    grid-column: span 3;
-    grid-row: span 2;
-  }
-  
-  .mosaic li:nth-child(19) {
-    grid-column: span 2;
-  }
-  
-  .mosaic li:nth-child(20) {
-    grid-column: span 3;
-  }
-  
+
+/* grid */
+
+.home-hero {
+    padding: 2rem;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
+}
+.gallery-unit {
+    background-color: var(--color-near-black);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.gallery-unit a {
+    color: #cce3de;
+}
+.gallery-unit img {
+    max-width: 100%;
+}
+
+
+
+
+
+/* end grid*/
 
   /* web page -  scattered boxes */
+
+
+
+  /* Footer */
+  footer {
+    background-color: #000000;
+    color: var(--color-white);
+    padding: 2rem;
+    font-family: 'Lato', sans-serif;
+  }
+  .f_content {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+  }
+  .f_links {
+    padding-left: 4rem;
+  }
+
+  /* media queries */
+  @media only screen and (min-width: 800px) {
+    .lndg-hero-image {
+        height: 800px;
+      }
+
+      .hero-text {
+        color: #00b4d8;
+      }
+
+}
+
+
+@media only screen and (min-width: 960px) {
+  /*
+  .home-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  } */
+}
+
+@media only screen and (min-width: 1400px) {
+    .lndg-hero-image {
+        height: 1000px;
+      }
+      .hero-text {
+        color: #ffbe0b;
+      }
+ 
+}

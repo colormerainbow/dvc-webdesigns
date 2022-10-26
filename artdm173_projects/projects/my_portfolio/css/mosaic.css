@@ -1,0 +1,124 @@
+/*CSS Grid for Mosaic layout  for highlights */
+
+.mosaic {
+    background-color: #d6ccc2;
+    padding: 2rem;
+  }
+  
+  .mosaic-section {
+    max-width: 940px;
+    margin: auto;
+  }
+  
+  .mosaic ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: 80px;
+    grid-auto-flow: dense;
+    background: #1c1b1b;
+  }
+  
+  .mosaic img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .mosaic ul,
+  .mosaic li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .mosaic li {
+    border: 6px solid black;
+  }
+  
+  .mosaic li:nth-child(1) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(2) {
+    grid-column: span 3;
+  }
+  
+  .mosaic li:nth-child(3) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(4) {
+    grid-column: span 6;
+  }
+  
+  .mosaic li:nth-child(5) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(6) {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
+  
+  .mosaic li:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .mosaic li:nth-child(8) {
+    grid-row: span 3;
+  }
+  
+  .mosaic li:nth-child(9) {
+    grid-row: span 2;
+  }
+  
+  .mosaic li:nth-child(10) {
+    grid-row: span 2;
+  }
+  
+  .mosaic li:nth-child(11) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .mosaic li:nth-child(12) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(13) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(14) {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(15) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(16) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .mosaic li:nth-child(17) {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(18) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  
+  .mosaic li:nth-child(19) {
+    grid-column: span 2;
+  }
+  
+  .mosaic li:nth-child(20) {
+    grid-column: span 3;
+  }
