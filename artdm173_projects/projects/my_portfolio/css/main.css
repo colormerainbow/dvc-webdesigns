@@ -83,6 +83,8 @@ nav {
 }
 .button1:hover {
   transform: scale(1.1) translateY(5px);
+  background-color: var(--color-accent-text-hot);
+  color: var(--color-white);
 }
 
 #home .home-pg,
@@ -132,8 +134,8 @@ nav {
     cursor: pointer;
   }
 
-  /* landing page intro message */
-  .lndg-intro-msg {
+  /* intro messages */
+  .intro {
     font-family: 'Marcellus SC', serif;
     font-size: 25px;
     background-color: var(--color-white);
@@ -159,8 +161,7 @@ nav {
     width: 100%;
   }
 
-/* grid */
-
+/* grid for home page*/
 .home-hero {
     padding: 2rem;
     display: grid;
@@ -185,14 +186,7 @@ nav {
 .home_img {
   margin-bottom: 2rem;
 }
-
-
-
 /* end grid*/
-
-  /* web page -  scattered boxes */
-
-
 
   /* Footer */
   footer {
