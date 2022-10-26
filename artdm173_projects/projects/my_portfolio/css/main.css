@@ -69,13 +69,20 @@ nav {
   margin: 0;
 }
 
-/* Add interactive transition effects for nav bar */
+/* Add interactive transition effects for link tabs */
 .site-nav li {
   transition: all .5s ease-in-out;
 }
 
 .site-nav li:hover {
   transform: scale(1.2) skewX(-5deg) translateX(1px);
+}
+
+.button1 {
+  transition: all .5s ease-in-out;
+}
+.button1:hover {
+  transform: scale(1.1) translateY(5px);
 }
 
 #home .home-pg,
