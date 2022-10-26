@@ -138,7 +138,7 @@ nav {
   .home-hero {
     max-width: 1900px;
     margin: auto;
-    color: var(--light-font-color);
+    color: #000000;
     padding-bottom: 2rem;
   }
   .home-hero h2 {
@@ -170,14 +170,14 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-.gallery-unit a {
-    color: #cce3de;
-}
+
 .gallery-unit img {
     max-width: 100%;
 }
 
-
+.home_img {
+  margin-bottom: 2rem;
+}
 
 
 
