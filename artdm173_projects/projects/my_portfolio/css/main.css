@@ -143,33 +143,33 @@ nav {
     text-align: center;
   }
 
-  /* css specific to home page */
-  .home-hero {
+  /* grid layouts 
+  .tile-grid {
     max-width: 1900px;
     margin: auto;
     color: #000000;
-    padding-bottom: 2rem;
-  }
-  .home-hero h2 {
-    margin: 1rem 0 .5rem 1rem;
-  }
-  .home-hero p {
+ //   padding: 2rem;
+  }*/
+  
+  .tile-grid p {
     padding: 1rem;
   }
-  .home_img {
+  .tile_img {
     display: block;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
-/* grid for home page*/
-.home-hero {
+.tile-grid {
     padding: 2rem;
     display: grid;
+    /*
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
+    */
 }
-.gallery-unit {
+.tile-unit {
     background-color: var(--color-near-black);
     color: white;
     padding: 20px;
@@ -178,14 +178,17 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-
-.gallery-unit img {
-    max-width: 100%;
+.home-hero {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+}
+.illus-grid {
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
 }
 
-.home_img {
-  margin-bottom: 2rem;
-}
 /* end grid*/
 
   /* Footer */
@@ -219,12 +222,7 @@ nav {
 
 
 @media only screen and (min-width: 960px) {
-  /*
-  .home-hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-  } */
+
 }
 
 @media only screen and (min-width: 1400px) {
