@@ -15,3 +15,6 @@ check for proper contrast of text vs background
 check accuracy of switching between warm and cool tones
 populate images with real ones
 homepg: mosaic-grid - pull best images to highlight 20
+
+
+note: holding.html is a holding spot for code that may be useful for expansion.

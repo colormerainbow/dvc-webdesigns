@@ -1,0 +1,47 @@
+/* CSS Grid for Gallery */
+.overlap-gallery {
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+.overlap-gallery img {
+  display: block;
+  width: 100%;
+}
+
+/*
+.overlap-gallery {
+    margin: 3rem 4rem 8rem 0rem;
+}*/
+.overlap-gallery ul {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 3fr 6fr;
+  list-style: none;
+  margin: 0 0 0 2rem;
+  padding: 2.2rem;
+  background: #f6f3ea;
+  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.overlap-gallery li:nth-child(1) {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  z-index: 2;
+  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.overlap-gallery li:nth-child(2) {
+  grid-row: 2 / span 4;
+  grid-column: 2 / span 3;
+}
+
+.overlap-gallery li:nth-child(3) {
+  grid-row: 4 / span 3;
+  grid-column: 4 / span 2;
+  z-index: 2;
+  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4);
+}

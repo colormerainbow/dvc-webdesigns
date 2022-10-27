@@ -12,6 +12,7 @@ html {
   --color-near-black: #231f20;
   --color-white: #ffffff;
   --color-lite-blue: #a8dadc;
+  --color-body-bkgnd: #f1f1ff;
 
   /*palette 1 cool theme */
   --color-rich-background: #d0d9cb;
@@ -28,12 +29,15 @@ html {
   --color-shade: #d9d9d9;
   --color-text: #ffffff;
   */
-                               
 }
+
+body {
+  background: var(--color-white);
+}
+
 header {
   color: var(--color-white);
   background: #000000;
- // background-image: linear-gradient(to right, #000000 30%, var(--color-white));
   padding: 1rem;
 }
 .head-banner {
@@ -100,15 +104,18 @@ nav {
   font-size: 20px;
 }
 
-/* landing page hero image */
+/* hero images and text and button treatment */
+
+.hero-image {
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .lndg-hero-image {
     background-image: url("../images/digart_splash3.jpeg");
-    background-color: #cccccc;
     height: 500px;
     background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
   }
   .lndg-hero-text {
     text-align: center;
@@ -132,6 +139,16 @@ nav {
     font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
+  }
+  .more-hero-image {
+    background-image: url("../images/Page_Under_Construction.jpeg");
+    height: 1200px;
+    background-position: center top;
+  }
+  .photo-hero-image {
+    background-image: url("../images/under-construction.jpeg");
+    height: 1200px;
+    background-position: center bottom;
   }
 
   /* intro messages */
@@ -177,6 +194,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 3px 3px 18px -8px #263238;
 }
 .home-hero {
   grid-column-gap: 10px;
@@ -187,6 +205,9 @@ nav {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+.illus-unit {
+
 }
 
 /* end grid*/
