@@ -45,6 +45,7 @@ header {
     display: flex;
     justify-content:space-between;
     align-items: center;
+    padding: 1rem 5rem;
   }
 header h1 {
   color: var(--color-white);
@@ -224,14 +225,6 @@ nav {
     text-align: center;
   }
 
-  /* grid layouts 
-  .tile-grid {
-    max-width: 1900px;
-    margin: auto;
-    color: #000000;
- //   padding: 2rem;
-  }*/
-  
   .tile-grid p {
     padding: 1rem;
   }
@@ -244,11 +237,7 @@ nav {
 .tile-grid {
     padding: 2rem;
     display: grid;
-    /*
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
-    */
+
 }
 .tile-unit {
     background-color: var(--color-near-black);
@@ -293,30 +282,27 @@ nav {
   }
   .f_links a{
     text-decoration: none;
-    color: var(--color-white);a
+    color: var(--color-white);
   }
 
   /* media queries */
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 600px) {
     .lndg-hero-image {
         height: 800px;
       }
-
       .hero-text {
         color: #00b4d8;
       }
-      .main-nav li {
-        font-size:1.8rem;
-    }
-    
-    .main-nav {
-        width: 25%;
-    }
 }
 
 
-@media only screen and (min-width: 960px) { 
-
+@media only screen and (min-width: 850px) { 
+    .main-nav li {
+        font-size: 1.7rem;
+    }
+    .main-nav {
+        width: 30%;
+    }
 
 }
 
@@ -330,7 +316,6 @@ nav {
       .main-nav li {
         font-size: 2rem;
     }
-    
     .main-nav {
         width: 20%;
     }
