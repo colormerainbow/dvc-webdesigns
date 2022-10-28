@@ -18,3 +18,6 @@ homepg: mosaic-grid - pull best images to highlight 20
 
 
 note: holding.html is a holding spot for code that may be useful for expansion.
+
+springtime blossoms: 
+Photograph of spring-time blooms on a local tree during a very brief week under the perfect conditions before the leaves sprout.
