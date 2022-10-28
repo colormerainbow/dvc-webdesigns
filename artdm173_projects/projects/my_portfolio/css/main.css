@@ -40,6 +40,9 @@ header {
   background: #000000;
   padding: 1rem;
 }
+.expmt-header {
+  background: #eaeaea;
+}
 .lndg-banner {
   display: flex;
   justify-content: flex-end;
@@ -137,7 +140,7 @@ nav {
     margin:0;
     font-weight:500;
     position:absolute;
-    top: 50px;
+    top: 150px;
     left: -40px;
     z-index:3;
     width: 45%;
@@ -259,7 +262,8 @@ nav {
   grid-row-gap: 10px;
   grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
 }
-.illus-grid {
+.illus-grid,
+.photo-grid {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
