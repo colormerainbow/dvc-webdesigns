@@ -18,6 +18,18 @@ html {
     --size-med: calc( var(--size-sm) * var(--ratio) );
     --size-lg: calc( var(--size-med) * var(--ratio) );
     --size-xlg: calc( var(--size-lg) * var(--ratio) );
+
+    --clamp-ratio: 1.2;
+
+    --cl-min-sm: calc( 1rem * var(--clamp-ratio) );
+    --cl-min-med: calc( var(--cl-min-sm) * var(--clamp-ratio) );
+    --cl-min-lg: calc( var(--cl-min-med) * var(--clamp-ratio) );
+    --cl-min-xlg: calc( var(--cl-min-lg) * var(--clamp-ratio) );
+    --cl-max-sm: calc( 1.5rem * var(--clamp-ratio) );
+    --cl-max-med: calc( var(--cl-max-sm) * var(--clamp-ratio) );
+    --cl-max-lg: calc( var(--cl-max-med) * var(--clamp-ratio) );
+    --cl-max-xlg: calc( var(--cl-max-lg) * var(--clamp-ratio) );
+
     
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
@@ -38,7 +50,6 @@ header h1 {
     color: #a8dadc;
     margin: auto;
     font-family: 'Merienda', cursive;
- //   font-size: clamp(1.8rem, 10vw, 2.8rem);
 }
 nav {
     background: var(--base-color);
@@ -82,11 +93,12 @@ nav {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    font-size: clamp(16px, 2.5vmin, 18px);
+    font-size: clamp(16px, 2.5vw, 18px);
 }
 main{
     margin: 1rem auto;
-    max-width: 34rem;
+    padding: 0 1rem;
+    max-width: 80rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,29 +117,38 @@ h1, h2, h3, h4, h5, h6 {
 */
 h1 {
     font-size: var(--size-xlg);
-    font-size: clamp(1.75rem, 5vmin, 2.5rem);
+    font-size: clamp(var(--cl-min-xlg), 20vw, var(--cl-max-xlg));
 }
 
 h2 {
     font-size: var(--size-lg);
-    font-size: clamp(1.5rem, 4vmin, 2rem);
+    font-size: clamp(var(--cl-min-lg), 4vw, var(--cl-max-lg));
 }
 
 h3 {
     font-size: var(--size-med);
-    font-size: clamp(1.2rem, 3.5vmin, 1.75rem);
+    font-size: clamp(var(--cl-min-med), 3.5vw, var(--cl-max-med));
 }
 h4 {
     font-size: var(--size-sm);
-    font-size: clamp(1.1rem, 3vmin, 1.5rem);
+    font-size: clamp(var(--cl-min-sm), 3vw, var(--cl-max-sm));
 }
 
 .intro-text {
-    font-size: var(--size-sm);
+    font-size: var(--size-sm); 
+    font-size: clamp(var(--cl-min-sm), 1.5vw, var(--cl-max-sm));
     line-height: 1.3;
 }
+figure {
+    width: 150px;
+}
 
-
+.expert {
+    background-color: coral;
+}
+.science {
+    background-color: yellow;
+}
   /* css specific to picture 
   .pic_h1 {
     font-size: 40px;
@@ -145,6 +166,67 @@ h4 {
     margin: auto;
     padding: 1rem;
   }
+
+  @media ( min-width: 800px ) {
+    
+
+/* Explicit layout of grid  */
+.picture-text {
+    display:grid;
+    grid-gap:.5rem;
+    grid-template-areas: 
+    "a a a a" 
+    "c b b b" ;
+ }
+  
+  .a {
+    grid-area: a;
+  }
+  .b {
+    grid-area: b;
+  }
+  .c {
+    grid-area: c;
+  }
+
+  .two-method {
+    display:grid;
+    grid-gap:.5rem;
+    grid-template-areas: 
+    "d d e e" ;
+ }
+
+
+  .d {
+    grid-area: d;
+  }
+  .e {
+    grid-area: e;
+  }
+  /*
+  .f {
+    grid-area: f;
+    padding: 2rem;
+  }
+  .g {
+    grid-area: g;
+  }
+  .h {
+    grid-area: h;
+  }
+  .i {
+    grid-area: i;
+  }
+  .j {
+    grid-area: j;
+  }
+  .k {
+    grid-area: k;
+  }
+  */
+}
+
+
 /*
 
   @media ( min-width: 600px ) {
