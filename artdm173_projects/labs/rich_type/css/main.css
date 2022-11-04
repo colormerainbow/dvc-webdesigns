@@ -25,21 +25,36 @@ html {
     --cl-min-med: calc( var(--cl-min-sm) * var(--clamp-ratio) );
     --cl-min-lg: calc( var(--cl-min-med) * var(--clamp-ratio) );
     --cl-min-xlg: calc( var(--cl-min-lg) * var(--clamp-ratio) );
+    --cl-min-super: calc( var(--cl-min-xlg) * var(--clamp-ratio) );
     --cl-max-sm: calc( 1.5rem * var(--clamp-ratio) );
     --cl-max-med: calc( var(--cl-max-sm) * var(--clamp-ratio) );
     --cl-max-lg: calc( var(--cl-max-med) * var(--clamp-ratio) );
     --cl-max-xlg: calc( var(--cl-max-lg) * var(--clamp-ratio) );
+    --cl-max-super: calc( var(--cl-max-xlg) * var(--clamp-ratio) );
+/*
+    --color-dark: #1b263bf;
+    --color-mid: #1d3557;
+    --color-light: #778da9;
+    --color-lighter: #e0e1dd;
+    */
 
-    
+    --color-dark: #454545;
+    --color-mid: #785964;
+    --color-light: #d5c7bc;
+    --color-lighter: #f1fffa;
+    --color-hilite: #93b7be;
+
     font-family: 'Poppins', sans-serif;
     line-height: 1.4;
+    background-image: url(../images/geometric-leaves.webp);
+    color: var(--color-dark);
 }
 
 
 /* Use Flexbox to format the header */
 header {
-    background: #1d3557;
-    background-image: linear-gradient(to left, #000000 30%, #457b9d);
+    background: var(--color-light);
+    background-image: linear-gradient(to left, var(--color-light) 40%, var(--color-lighter));
     padding: 1rem;
 }
 .head-banner {
@@ -47,22 +62,21 @@ header {
     align-items: center;
 }
 header h1 {
-    color: #a8dadc;
     margin: auto;
     font-family: 'Merienda', cursive;
 }
 nav {
-    background: var(--base-color);
-    margin: 1rem;
+    margin-top: 1rem;
 }
 
 .site-nav a {
-    color: white;
     font-family: 'Lato', sans-serif;
     display: block;
     margin: 1rem;
     text-decoration: none;
     cursor: pointer;
+    color: var(--color-dark);
+    text-transform: uppercase;
 }
 
 .site-nav ul {
@@ -85,7 +99,7 @@ nav {
 
 #home .home-pg {
     text-decoration: none;
-    color: #a7c957;
+    color: var(--color-hilite);
     border-top: 2px solid;
     font-weight: bold;
     font-size: 20px;
@@ -93,90 +107,99 @@ nav {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    font-size: clamp(16px, 2.5vw, 18px);
+    font-size: clamp(1rem, 2.5vw, var(--cl-max-sm));
 }
 main{
     margin: 1rem auto;
-    padding: 0 1rem;
-    max-width: 80rem;
+    padding: 0 0.5rem;
+    max-width: 100vw;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
     font-family: 'Merienda', cursive;
-    line-height: 1.1;
-    margin-top: 2em;
- //   max-width: 50rem;
- //   margin: 1rem auto;
+    line-height: 1.2;
+    margin-top: 1em;
 }
 
-/*
-.a {
-//    max-width: 34rem;
- //   margin: 1rem auto;
-}
-*/
 h1 {
+    font-size: var(--size-super);
+    font-size: clamp(var(--cl-min-super), 15vw, var(--cl-max-super));
+}
+h2 {
     font-size: var(--size-xlg);
-    font-size: clamp(var(--cl-min-xlg), 20vw, var(--cl-max-xlg));
+    font-size: clamp(var(--cl-min-xlg), 8vw, var(--cl-max-xlg));
 }
 
-h2 {
+h3 {
     font-size: var(--size-lg);
     font-size: clamp(var(--cl-min-lg), 4vw, var(--cl-max-lg));
 }
 
-h3 {
+h4 {
     font-size: var(--size-med);
     font-size: clamp(var(--cl-min-med), 3.5vw, var(--cl-max-med));
 }
-h4 {
+h5 {
     font-size: var(--size-sm);
-    font-size: clamp(var(--cl-min-sm), 3vw, var(--cl-max-sm));
+    font-size: clamp(var(--cl-min-sm), 2vw, var(--cl-max-sm));
 }
 
 .intro-text {
     font-size: var(--size-sm); 
     font-size: clamp(var(--cl-min-sm), 1.5vw, var(--cl-max-sm));
     line-height: 1.3;
-}
-figure {
-    width: 150px;
+    padding: 1rem 0;
 }
 
 .expert {
-    background-color: coral;
+    background-color: var(--color-hilite);
+    padding: 1rem;
+    margin: 1rem 0;
 }
 .science {
-    background-color: yellow;
-}
-  /* css specific to picture 
-  .pic_h1 {
-    font-size: 40px;
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-  .picture-text {
-    text-align: center;
-    padding: 2rem;
-    color: var(--light-font-color);
-  }*/
-  .b {
-    display: block;
-    width: 100vw;
-    margin: auto;
+    background-color: var(--color-light);
     padding: 1rem;
-  }
+    margin: 1rem 0;
+}
+.science h3 {
+    padding-bottom: 2rem;
+}
+.expert-method,
+.science-method {
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+}
+.b {
+    display: flex;
+    flex-direction: column;
 
-  @media ( min-width: 800px ) {
-    
+}
+.quote {
+    font-size: clamp(12px, 1.1vw, var(--cl-max-sm));
+}
 
+footer {
+    background-color: var(--color-hilite);
+    color: var(--color-dark);
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+}
+
+@media only screen and (min-width: 800px) {
+
+    main {
+        max-width: 75vw;
+    }
 /* Explicit layout of grid  */
 .picture-text {
     display:grid;
-    grid-gap:.5rem;
+    grid-gap: 1rem;
     grid-template-areas: 
-    "a a a a" 
-    "c b b b" ;
+    "a a a" 
+    "c b b" ;
  }
   
   .a {
@@ -191,11 +214,10 @@ figure {
 
   .two-method {
     display:grid;
-    grid-gap:.5rem;
+    grid-gap: 1rem;
     grid-template-areas: 
     "d d e e" ;
  }
-
 
   .d {
     grid-area: d;
@@ -203,38 +225,4 @@ figure {
   .e {
     grid-area: e;
   }
-  /*
-  .f {
-    grid-area: f;
-    padding: 2rem;
-  }
-  .g {
-    grid-area: g;
-  }
-  .h {
-    grid-area: h;
-  }
-  .i {
-    grid-area: i;
-  }
-  .j {
-    grid-area: j;
-  }
-  .k {
-    grid-area: k;
-  }
-  */
 }
-
-
-/*
-
-  @media ( min-width: 600px ) {
-    
-    html {
-        --ratio: 1.6;
-        
-        font-size: 17px;
-    }
-    
-}*/
