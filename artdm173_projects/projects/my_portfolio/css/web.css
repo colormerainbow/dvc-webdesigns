@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
 /* css Grid for web design montage */
 figcaption {
   color: var(--color-white);
+  font-family: 'News Cycle', sans-serif;
 }
 
 .webdesign-montage {
@@ -34,6 +36,8 @@ div.relative {
 .webdesign-blocks li {
   list-style-type: none;
   padding: 5px;
+  width: 100%;
+  margin: auto;
   border-radius: 8px;
   background: #000;
 }

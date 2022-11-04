@@ -91,7 +91,9 @@ header h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
-
+main {
+  margin-bottom: 20rem;
+}
 /* hamburger menu */
 
 .main-nav li {
@@ -212,7 +214,6 @@ header h1 {
   font-family: 'Marcellus SC', serif;
   font-size: 25px;
   background-color: var(--color-white);
-  padding: 2rem;
   text-align: center;
 }
 
@@ -269,6 +270,10 @@ footer {
   color: var(--color-white);
   padding: 2rem;
   font-family: 'Lato', sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .f_content {
@@ -276,7 +281,7 @@ footer {
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .f_links {
