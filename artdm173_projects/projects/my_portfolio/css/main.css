@@ -215,6 +215,7 @@ main {
   font-size: 25px;
   background-color: var(--color-white);
   text-align: center;
+  padding-top: 2rem;
 }
 
 .tile-grid p {
@@ -268,7 +269,6 @@ main {
 footer {
   background-color: #000000;
   color: var(--color-white);
-  padding: 2rem;
   font-family: 'Lato', sans-serif;
   position: fixed;
   left: 0;
@@ -281,7 +281,7 @@ footer {
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 2rem 0 0 2rem;
 }
 
 .f_links {
@@ -292,6 +292,9 @@ footer {
 .f_links a {
   text-decoration: none;
   color: var(--color-white);
+}
+.f_cp {
+  padding: 0 0 2rem 2rem;
 }
 
 /* media queries */
