@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGODA Web Design Gallery</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/illus.css">
+    <!--illus for popup modals-->
+    <script src="js/main.js" defer></script> <!-- js for pop-in nav box -->
+</head>
+
+<body id="photo">
+    <header class="main-header">
+
+        <a id="menu-btn" href="#"><img id="burger" src="images/nav/white_hmbg.svg" alt="menu burger icon" width="60"
+                height="100"></a>
+
+        <a href="index.html"><img class="logo" src="images/svgfiles/MAGDS_wht.svg" alt="MAGODA Logo" width="150"
+                height="150"></a>
+
+
+        <ul class="main-nav show">
+            <li>
+                <a href="#">
+                    <img id="x-burger" src="images/nav/white_X.svg" alt="close menu burger icon" width="30" height="30">
+                </a>
+            </li>
+            <li><a class="home-pg" href="home.html">Home</a></li>
+            <li><a class="web-pg" href="web.html">Web Designs</a></li>
+            <li><a class="photo-pg" href="#">Photography</a></li>
+            <li><a class="illus-pg" href="illus.html">Illustrations</a></li>
+            <!--
+                <li><a class="expmt-pg" href="expmt.html">Experimental</a></li>
+                <li><a class="more-pg" href="more.html">More</a></li>
+                -->
+        </ul>
+
+    </header>
+
+    <main>
+        <!-- placeholder for a photo carousel that autoplays -->
+        <article class="photo-intro-msg intro">
+            <h2>Photography Exhibit</h2>
+            <p>Eclectic featured collection of photographic art using digital image sensors and Adobe PhotoShop and
+                LightRoom.</p>
+        </article>
+
+        <article class="photo-grid tile-grid">
+
+            <div class="photo-unit tile-unit">
+                <div class="content">
+                    <img class="illus_img tile_img" src="images/photo/The_Starry_Night_vanGogh.png"
+                        alt="Van Gogh's Starry Night">
+                    <label class="modal-open modal-label" for="modal-open">
+                        <p>Van Gogh Replica</p>
+                    </label>
+                    <input type="radio" name="modal" value="open" id="modal-open" class="modal-radio">
+                    <div class="modal">
+                        <label class="modal-label overlay">
+                            <input type="radio" name="modal" value="close" class="modal-radio">
+                        </label>
+                        <div class="content">
+                            <div class="top">
+                                <h2>Van Gogh Replica</h2>
+                                <label class="modal-label close-btn">
+                                    <input type="radio" name="modal" value="close" class="modal-radio">
+                                </label>
+                            </div>
+                            <p>Demonstration of using Adobe Photoshop and LightRoom to take present-day digital photos
+                                and turn them into replicas of Impressionism Art.</p>
+                            <img class="img-pop" src="images/photo/vanGogh_StarryNight_Inspired-1.jpg"
+                                alt="my replica of Van Gogh's Starry Night">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="photo-unit tile-unit">
+                <div class="content">
+                    <img class="photo_img tile_img" src="images/photo/Persistence_of_Memory_Dali.png"
+                        alt="Salvadore Dali's Persistence of Memory">
+                    <label class="modal-open modal-label" for="modal-open2">
+                        <p>Salvadore Dali Replica</p>
+                    </label>
+                    <input type="radio" name="modal" value="open" id="modal-open2" class="modal-radio">
+                    <div class="modal modal2">
+                        <label class="modal-label overlay">
+                            <input type="radio" name="modal" value="close" class="modal-radio">
+                        </label>
+                        <div class="content">
+                            <div class="top">
+                                <h2>Salvadore Dali Replica</h2>
+                                <label class="modal-label close-btn">
+                                    <input type="radio" name="modal" value="close" class="modal-radio">
+                                </label>
+                            </div>
+                            <p>Another example of Demonstration of using Adobe Photoshop and LightRoom to take
+                                present-day digital photos and turn them into replicas of Impressionism Art.</p>
+                            <img class="img-pop" src="images/photo/Dali_Persistence_of_Memory_Inspired-2.jpg"
+                                alt="image for wellness universal symbols">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="photo-unit tile-unit">
+                <div class="content">
+
+                    <img class="photo_img tile_img" src="images/photo/Glove_and_Lighter_Ekberg.png"
+                        alt="Ekberg's Glove and Lighter picture">
+                    <label class="modal-open modal-label" for="modal-open3">
+                        <p>Photographic Composites</p>
+                    </label>
+                    <input type="radio" name="modal" value="open" id="modal-open3" class="modal-radio">
+                    <div class="modal modal3">
+                        <label class="modal-label overlay">
+                            <input type="radio" name="modal" value="close" class="modal-radio">
+                        </label>
+                        <div class="content">
+                            <div class="top">
+                                <h2>Photographic Composites</h2>
+                                <label class="modal-label close-btn">
+                                    <input type="radio" name="modal" value="close" class="modal-radio">
+                                </label>
+                            </div>
+                            <p>Demonstration of a composite photograph using a collection of photographic images and
+                                editing them using Adobe Photoshop to create a convincingly realistic but impossible
+                                image. Inspired by Adam Ekberg's work, Gloves and Lighter and influenced by the Covid-19
+                                Pandemic.</p>
+                            <img class="img-pop" src="images/photo/Ekberg_Glove_and_Lighter_Inspired_Composite-2.jpg"
+                                alt="Ekberg's Glove and Lighter picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-unit tile-unit">
+                <div class="content">
+
+                    <img class="photo_img tile_img" src="images/photo/EpicBattle_copy.jpg"
+                        alt="composite art with blending">
+                    <label class="modal-open modal-label" for="modal-open4">
+                        <p>Composite Blending</p>
+                    </label>
+                    <input type="radio" name="modal" value="open" id="modal-open4" class="modal-radio">
+                    <div class="modal modal4">
+                        <label class="modal-label overlay">
+                            <input type="radio" name="modal" value="close" class="modal-radio">
+                        </label>
+                        <div class="content">
+                            <div class="top">
+                                <h2>Composite Blending</h2>
+                                <label class="modal-label close-btn">
+                                    <input type="radio" name="modal" value="close" class="modal-radio">
+                                </label>
+                            </div>
+                            <p>Using Adobe Photoshop to combine multiple photographic images and digital illustrations
+                                into one seamless portrait of a realistic epic battle scene. Main heroine originated
+                                from a picture of a D&amp;D figurine. </p>
+                            <img class="img-pop" src="images/photo/EpicBattle_copy.jpg"
+                                alt="composite art with blending">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- section for the photobook
+    <section class="photo-unit tile-unit">
+        <img class="photo_img tile_img"
+        src="images/photo/macro.jpeg"
+            alt="macro image">
+
+
+            <a href="phmacro.html"><button type="button" class="button1">Macro Photography</button></a>
+
+        <p>Explore the world within our world! Macro shots of mundane, everyday objects reveal insights into the hidden world among us.
+        </p>
+
+    </section>
+
+-->
+        <article class="photo-intro-msg intro">
+            <h2>Digital Fine Art Photography Gallery</h2>
+            <p>Collections of digital photography taken over the years.</p>
+        </article>
+        <article class="photo-grid tile-grid">
+
+            <!--update to model srcset if add diff sized images-->
+            <section class="photo-unit tile-unit">
+                <img class="photo_img tile_img" src="images/photo/macro.jpeg" alt="macro image">
+
+
+                <a href="phmacro.html"><button type="button" class="button1">Macro Photography</button></a>
+
+                <p>Explore the world within our world! Macro shots of mundane, everyday objects reveal insights into the
+                    hidden world among us.
+                </p>
+
+            </section>
+
+            <section class="photo-unit tile-unit">
+                <img class="photo_img tile_img" src="images/photo/travel.jpeg"
+                    alt="image of someone taking a photo on vacation">
+
+
+                <a href="phtravel.html"><button type="button" class="button1">Travel</button></a>
+
+                <p>Photographs taken while traveling anywhere from the backyard and beyond.
+                </p>
+
+            </section>
+
+
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="f_content">
+            <a href="index.html"><img class="logo" src="images/svgfiles/MAGDS_wht.svg" alt="MAGODA Logo" width="100"
+                    height="100"></a>
+            <div class="f_links">
+                <h4><a href="expmt.html">Experimental</a></h4>
+                <h4><a href="more.html">More</a></h4>
+                <h4>Subscribe</h4>
+            </div>
+        </div>
+        <p class="f_cp">&copy; Copyright 2022 MAG Design Studio - All Rights Reserved</p>
+
+    </footer>
+
+</body>
+
+</html>
