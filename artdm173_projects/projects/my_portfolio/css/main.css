@@ -74,11 +74,6 @@ header {
 
 .lndg-banner {
   text-align: center;
-  /*
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 1rem 3rem*/
 }
 .logo {
   width: clamp(100px, 15vw, 180px);
@@ -96,23 +91,20 @@ header {
 }
 
 h2 {
-
 color: var(--color-accent-text-hot);
   margin: auto;
 //  font-family: 'Marcellus SC', serif;
  // font-size: clamp(1.8rem, 10vw, 2.8rem);
 font-size: 18px;
-font-size: clamp(1rem, 10vw, 2.8rem);
+font-size: clamp(1rem, 10vw, var(--size-xlg));
 }
 p {
   color: var(--color-near-black);
   font-size: 12px;
-  font-size: clamp(1rem, 4vw, var(--size-med));
+  font-size: clamp(1rem, 5vw, var(--size-sm));
 }
-/*
-.web-title {
-  font-family: 'Marcellus SC', serif;
-}*/
+
+
 .button1,
 .button2 {
   transition: all .5s ease-in-out;
@@ -124,12 +116,6 @@ p {
   background-color: var(--color-accent-text-hot);
   color: var(--color-white);
 }
-/*
-.button2:hover {
-  transform: scale(1.1) translateY(5px);
-  background-color: var(--color-near-black);
-  color: var(--color-accent-back-ack);
-}*/
 
 #home .home-pg,
 #web .web-pg,
@@ -246,6 +232,9 @@ main {
   cursor: pointer;
 }
 
+button {
+  text-transform: uppercase;
+}
 .button1 {
   background-color: var(--color-white);
   color: #000000;
@@ -254,7 +243,6 @@ main {
   background-color: var(--color-accent-back-ack);
   color: #000000;
 }
-
 
 .more-hero-image {
   background-image: url("../images/Page_Under_Construction.jpeg");
@@ -271,14 +259,20 @@ main {
 /* intro messages */
 .intro {
   font-family: 'Marcellus SC', serif;
-  font-size: 25px;
   background-color: var(--color-white);
   text-align: center;
   padding-top: 2rem;
 }
-
-.tile-grid p {
-  padding: 1rem;
+.intro h2{
+  font-size: 20px;
+  font-size: clamp(.8rem, 8vw, var(--size-xlg));
+}
+.intro h3 {
+  padding: 1rem 1rem 2rem 1rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-size: clamp(1rem, 3vw, var(--size-med));
+  line-height: 1.5;
 }
 
 .tile_img {
@@ -294,7 +288,6 @@ main {
 
 .tile-unit {
   background-color: var(--color-near-black);
-  color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -304,8 +297,9 @@ main {
 }
 
 .tile-unit p {
-  color: var(--color-near-black);
-    font-family: 'Lato', sans-serif;
+  color: var(--color-white);
+  font-family: 'Lato', sans-serif;
+  padding: 1rem;
 }
 
 .content {

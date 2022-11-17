@@ -5,11 +5,34 @@ main {
   text-align: center;
 }
 
+.tile-unit-modal {
+  background-color: var(--color-near-black);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  box-shadow: 3px 3px 18px -8px #263238;
+}
+/* the title link text under each featured image*/
+.tile-unit-modal p {
+  color: black;
+  font-family: 'Lato', sans-serif;
+  padding: 1rem;
+  transition: all .5s ease-in-out;
+} 
+
+.tile-unit-modal p:hover {
+  transform: scale(1.05);
+  color: var(--color-white);
+}
+/*the featured item link box*/
 .modal-open {
   display: inline-block;
-  background: var(--color-accent-back-ack);
+  background: white;
   padding: 10px 25px;
-  color: #000000;
+  width: 100%;
+//  color: #000000;
   font-family: 'Poppins', sans-serif;
 //  font-size: 16px;
   margin: 4px 2px;
@@ -18,13 +41,14 @@ main {
 }
 
 .modal-open:hover {
-  transform: scale(1.1) translateY(5px);
+  transform: scale(1.1) translateY(3px);
   background-color: var(--color-accent-text-hot);
-  color: var(--color-white);
+ // color: var(--color-white);
 }
 
 .modal-label {
   position: relative;
+  text-transform: uppercase;
 }
 
 .modal-radio {
@@ -97,12 +121,15 @@ main {
   top: 10%;
   left: 5%;
   background: #fff;
-  color: #000000;
+//  color: #000000;
   border-radius: 15px;
   box-shadow: 0 3px 15px -2px #222;
   padding: 20px;
 }
 
+.content p {
+//  color: pink;
+}
 .close-btn {
   position: absolute;
   width: 30px;
