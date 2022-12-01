@@ -1,0 +1,32 @@
+        {pf_feature_image}
+<img class="home_img tile_img" src="{pf_feature_image:file}" alt="gallery image">
+{/pf_feature_image}
+
+
+
+<section class="category-list">
+        <h3>Filter by Category: </h3>
+        
+        
+        <div class="nav_categories">
+        
+        <a {if last_segment == 'portfolio'}class="current"{/if}
+           href="{homepage}/portfolio">All</a>
+              
+		{exp:channel:categories show_empty="no" style="linear"}
+              <a {if last_segment != 'portfolio'}
+              	{if segment_3 == category_id }
+                class="current"
+                {/if}
+              {/if}
+              href="{path='portfolio/category/{category_id}'}">
+              {category_name}</a>
+              
+		{/exp:channel:categories}
+        </div>
+        </section>
+
+
+
+        {exp:channel:entries channel="projects" status="open|featured" dynamic_parameters="category" category="{segment_3}"}
+        
