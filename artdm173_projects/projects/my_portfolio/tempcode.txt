@@ -30,3 +30,32 @@
 
         {exp:channel:entries channel="projects" status="open|featured" dynamic_parameters="category" category="{segment_3}"}
         
+
+<!-- example of code to use with a file grid type field for images -->
+<!-- used for ee template of home page placed between <main> tags -->
+            <article class="home-hero tile-grid">
+        {exp:channel:entries channel="home" status='open | featured'} 
+
+        <section class="gallery-unit tile-unit">
+            <img class="home_img tile_img" src="
+            {pf_feature_image}{pf_feature_image:file}{/pf_feature_image}
+            " alt="gallery image">
+
+            <a href="{pf_content_type}_gallery"><button type="button" class="cta button1">{title}</button></a>
+
+            <p>{pf_excerpt}
+            </p>
+        </section>
+
+
+        {/exp:channel:entries}
+
+        </article>
+
+        <!-- end of example -->
+
+
+
+        <a href="{url_title_path='projects/project'}">
+                        	Learn About this Project >>
+                        </a>
